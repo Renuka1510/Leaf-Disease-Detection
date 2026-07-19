@@ -1,7 +1,9 @@
 import json
 import time
 import os
+
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+
 import tensorflow as tf
 from tensorflow.keras import Model
 from tensorflow.keras.layers import (
@@ -11,6 +13,8 @@ from tensorflow.keras.layers import (
     GlobalAveragePooling2D
 )
 from tensorflow.keras.applications import ResNet50
+
+from huggingface_hub import hf_hub_download
 
 from config import (
     MODEL_PATH,
@@ -25,6 +29,40 @@ from utils import (
 )
 
 # ==========================================================
+# Hugging Face Model Details
+# ==========================================================
+
+HF_REPO_ID = "renuka-1510/leaf-disease-resnet50"
+HF_FILENAME = "ResNet50_weights_only.weights.h5"
+
+
+# ==========================================================
+# Download Model if Missing
+# ==========================================================
+
+def ensure_model_exists():
+    """
+    Downloads the model from Hugging Face if it doesn't exist locally.
+    """
+
+    if os.path.exists(MODEL_PATH):
+        return
+
+    print("Downloading model from Hugging Face...")
+
+    os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
+
+    hf_hub_download(
+        repo_id=HF_REPO_ID,
+        filename=HF_FILENAME,
+        local_dir=os.path.dirname(MODEL_PATH),
+        local_dir_use_symlinks=False
+    )
+
+    print("Model downloaded successfully.")
+
+
+# ==========================================================
 # Model Architecture
 # ==========================================================
 
@@ -32,6 +70,8 @@ def build_model():
     """
     Build the ResNet50 model architecture and load trained weights.
     """
+
+    ensure_model_exists()
 
     base_model = ResNet50(
         include_top=False,
