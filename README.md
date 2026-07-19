@@ -32,33 +32,17 @@ This project uses a deep learning model trained on the **PlantVillage Dataset** 
 
 ## 📸 Application Preview
 
-### 🏠 Home Page
+| Home Page | Upload Image |
+|------------|--------------|
+| ![](Screenshots/Home_page.png) | ![](Screenshots/Upload_Option.png) |
 
-![Home Page](Screenshots/Home_page.png)
+| Diagnosis | Prediction Summary |
+|------------|--------------------|
+| ![](Screenshots/Diagnosis.png) | ![](Screenshots/Prediction_Summary.png) |
 
----
-
-### 📤 Upload Option
-
-![Upload Option](Screenshots/Upload_Option.png)
-
----
-
-### 🩺 Diagnosis
-
-![Diagnosis](Screenshots/Diagnosis.png)
-
----
-
-### 🚦 Multi-Risk Assessment
-
-![Multi Risk Assessment](Screenshots/Multi-risk-diagnosis.png)
-
----
-
-### 📋 Prediction Summary
-
-![Prediction Summary](Screenshots/Prediction_Summary.png)
+| Multi-Risk Assessment |
+|-----------------------|
+| ![](Screenshots/Multi-risk-diagnosis.png) |
 
 ## 🛠️ Tech Stack
 
