@@ -20,4 +20,4 @@ logs/
 Thumbs.db
 
 # Ignore trained model
-# Models/*.h5
+Models/*.h5
