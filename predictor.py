@@ -55,8 +55,7 @@ def ensure_model_exists():
     hf_hub_download(
         repo_id=HF_REPO_ID,
         filename=HF_FILENAME,
-        local_dir=os.path.dirname(MODEL_PATH),
-        local_dir_use_symlinks=False
+        local_dir=os.path.dirname(MODEL_PATH)
     )
 
     print("Model downloaded successfully.")
