@@ -30,6 +30,36 @@ This project uses a deep learning model trained on the **PlantVillage Dataset** 
 
 ---
 
+## 📸 Application Preview
+
+### 🏠 Home Page
+
+![Home Page](Screenshots/Home_page.png)
+
+---
+
+### 📤 Upload Option
+
+![Upload Option](Screenshots/Upload_Option.png)
+
+---
+
+### 🩺 Diagnosis
+
+![Diagnosis](Screenshots/Diagnosis.png)
+
+---
+
+### 🚦 Multi-Risk Assessment
+
+![Multi Risk Assessment](Screenshots/Multi-risk-diagnosis.png)
+
+---
+
+### 📋 Prediction Summary
+
+![Prediction Summary](Screenshots/Prediction_Summary.png)
+
 ## 🛠️ Tech Stack
 
 | Category | Technology |
